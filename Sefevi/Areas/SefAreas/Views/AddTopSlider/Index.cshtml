@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Sefevi.Models.TopSlider>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/SefAreas/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LanguageTB.CultureCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Header)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SliderImage)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LanguageTB.CultureCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Header)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            <img class="img-responsive" style="width:25%" src="@item.SliderImage"/>
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TopSiderId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TopSiderId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TopSiderId })
+        </td>
+    </tr>
+}
+
+</table>

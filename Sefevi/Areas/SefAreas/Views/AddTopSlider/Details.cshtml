@@ -1,0 +1,51 @@
+﻿@model Sefevi.Models.TopSlider
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/SefAreas/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TopSlider</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LanguageTB.CultureCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LanguageTB.CultureCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Header)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Header)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SliderImage)
+        </dt>
+
+        <dd>
+           <img class="img-thumbnail" width="50" src="@Model.SliderImage"/>
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TopSiderId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

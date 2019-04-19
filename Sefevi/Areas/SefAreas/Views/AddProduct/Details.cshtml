@@ -1,0 +1,73 @@
+﻿@model Sefevi.Models.ProductsTB
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/SefAreas/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LanguageTB.CultureCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LanguageTB.CultureCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Decription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Decription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Protein)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Protein)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ton)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ton)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model=>model.ProductImage)
+        </dt>
+        <dd>
+            <img src="@Model.ProductImage" style="width:25%" />
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

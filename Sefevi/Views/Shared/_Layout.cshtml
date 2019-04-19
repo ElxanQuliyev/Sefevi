@@ -1,0 +1,197 @@
+﻿@using Sefevi.TextSource;
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Lawn Express</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic" rel="stylesheet" type="text/css">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- Preloader -->
+        <div class="preloader"></div>
+        <!--Start Header-->
+        <header>
+            <div class="top_bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7 col-md-7">
+                            <p><i class="fa fa-phone"></i>+92 368 4569200</p>
+                            <p><i class="fa fa-envelope"></i>info@domain.com</p>
+                        </div>
+                        <div class="col-sm-5 col-md-5 text-right">
+
+                            <ul class="list-unstyled list-inline">
+
+                                <li>
+                                    <a href="@Url.Action("Change","Language",new { LanguageAbbrevation = "az" })">
+                                        <img width=23 class="img-responsive" src="~/images/flagaz.png" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Change","Language",new { LanguageAbbrevation = "ru" })">
+                                        <img width=23 class="img-responsive" src="~/images/ru-01.png" />
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bottom home1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-xs-12">
+                            <div class="logo">
+                                <a href="@Url.Action("Index","Home")">Sefevi</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-7 col-md-7 text-right">
+                            <nav>
+                                <ul>
+
+                                    <li><a href="contact.html">@RGlobal.RAbout</a></li>
+                                    <li><a href="contact.html">@RGlobal.RServices</a></li>
+                                    <li><a href="contact.html">@RGlobal.RProduct</a></li>
+                                    <li><a href="contact.html">@RGlobal.RBlog</a></li>
+                                    <li><a href="contact.html">@RGlobal.RContact</a></li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-sm-9 col-md-2 col-xs-12 responsive_center">
+                            <div class="cart_info">
+                                <a href="cart.html"><img src="images/cart.png" alt="img" /> <span>3</span></a>
+                            </div>
+                            <form action="#">
+                                <input type="text" placeholder="search" />
+                                <input type="submit" value="" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--End Header-->
+        @RenderBody()
+        <!--Start Footer -->
+        <div class="footer_bottom">
+            <div class="footer_inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4 animated slide">
+                            <div class="footer_widget">
+                                <a href="#"><img src="images/white_logo.png" alt="img"></a>
+                                <p>
+                                    Adipisicing elit sed do eiusmod tempor incidunt labore et dolore magna aliqua enim minim ven quis nostu exercitation ullamco.
+                                </p>
+                                <hr>
+                                <p><i class="fa fa-map-marker"></i>Brooks St. 71, Washington DC, USA</p>
+                                <p><i class=" fa fa-phone"></i>Toll Free; (01) 321 668 297</p>
+                                <p><i class="fa fa-envelope"></i>info@lawnexpress.com</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-md-2 animated slide">
+                            https://shop.az/c/2103-meishet-texnikasi
+                            <div class="footer_widget">
+                                <h5>Quick Links</h5>
+                                <ul>
+                                    <li><a href="index-2.html">Home Page</a></li>
+                                    <li><a href="about.html">About us</a></li>
+                                    <li><a href="services.html">Our Services</a></li>
+                                    <li><a href="project_detail.html">The Projects</a></li>
+                                    <li><a href="shop.html">Shop Online</a></li>
+                                    <li><a href="blog.html">Our News</a></li>
+                                    <li><a href="contact.html">Get in Touch</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-md-3 animated slide">
+                            <div class="footer_widget">
+                                <h5>Working Hours</h5>
+                                <address>
+                                    <p><span>We are open 6 Days a week.</span></p>
+                                    <p>Monday to Friday : 9 am - 5 pm</p>
+                                    <p>Saturday : 10 am - 4 pm</p>
+                                    <p>Sunday : By Appointment Only</p>
+                                </address>
+                                <address>
+                                    <p>We are also close on Bank </p>
+                                    <p>& Calender Holidays.</p>
+                                </address>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-md-3 animated slide">
+                            <div class="footer_widget">
+                                <h5>Contact Us</h5>
+                                <p>
+                                    Magna aliqua ut enim veniam quis nostrud exercitation sed.
+                                </p>
+                                <div class="news_letter">
+                                    <p class="success" id="success" style="display:none; color: blue; text-decoration: underline; font-size: 14px;"></p>
+                                    <p class="error" id="error" style="display:none; color: red; text-decoration: underline; font-size: 14px;"></p>
+                                    <form action="http://www.shmai.com/preview/lawnexpress-html/process.php" method="post" id="newsletter_form">
+                                        <input type="text" placeholder="Newsletter sign up" name="newletter_email" id="newletter_email" />
+                                        <input type="submit" id="subcribe" class="button" value="subscribe now" name="subcribe">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container animated slide">
+                <div class="row">
+                    <div class="col-sm-8 col-md-8">
+                        <p>Copyrights 2018 <strong>LAWN EXPRESS</strong> • All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-4 text-right">
+                        <div class="social_icon">
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <a href="#0" class="cd-top"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+    </div>
+    <!-- jQuery -->
+    <script src="~/Scripts/jquery.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <!-- Jquery Ui -->
+    <script src="~/Scripts/jquery-ui.js"></script>
+    <!-- Slider -->
+    <script src="~/Scripts/owl.carousel.js"></script>
+    <!-- Isotope -->
+    <script src="~/Scripts/isotope-docs.min.js"></script>
+    <!-- PrettyPhoto -->
+    <script src="~/Scripts/jquery.prettyPhoto.js"></script>
+    <!-- Parallax -->
+    <script src="~/Scripts/jquery.parallax.js"></script>
+    <!-- Slider -->
+    <script src="~/Scripts/jquery.cycle.all.js"></script>
+    <!-- Appear -->
+    <script src="~/Scripts/jquery.appear.js"></script>
+    <!-- Custom -->
+    <script src="~/Scripts/custom.js"></script>
+</body>
+</html>
